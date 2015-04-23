@@ -4,8 +4,7 @@ modal-id: 4
 date: 2014-07-15
 img: cyclistsofbangalore.png
 alt: Cyclists of Bangalore
-client: Cyclists of Bangalore
-category: Web Development
-description: Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!
-
+client: www.cyclistsofbangalore.com
+technologies: Rails, Strava API
+description: A simple app where cyclists of bangalore can rank themselves based on distance travelled in current month. The app uses data from Strava.
 ---
