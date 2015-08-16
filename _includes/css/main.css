@@ -108,6 +108,11 @@ header .intro-text .skills {
     font-weight: 300;
 }
 
+header .intro-text .sub_text {
+    font-size: 1.25em;
+    font-weight: 300;
+}
+
 @media(min-width:768px) {
     header .container {
         padding-top: 200px;
@@ -445,4 +450,7 @@ footer .footer-below {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+#services_content {
+    border-bottom: 1px solid #ddd;
 }
