@@ -454,3 +454,10 @@ footer .footer-below {
 #services_content {
     border-bottom: 1px solid #ddd;
 }
+#services_header .container {
+    padding-top: 150px !important;
+    padding-bottom: 50px !important;
+}
+#services_content #features_list {
+    display: inline-block;
+}

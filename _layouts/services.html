@@ -3,9 +3,8 @@
     {% include head.html %}
     <body id="page-top" class="index">
     {% include nav.html %}
-    {% include services_header.html %}
 
-    {% include services_content.html %}
+    {{ content }}
 
     {% if site.contact == "static" %}
     {% include contact.html %}
