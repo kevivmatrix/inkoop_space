@@ -2,10 +2,12 @@
 <html>
 <head>
   <title>Inkoop | Ruby on Rails Consultancy</title>
-  <link rel="stylesheet" href='{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,900,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href='{{ "/assets/css/style.css" | prepend: site.baseurl }}'>
 </head>
 <body onload="init();" scroll="no">
+  {% include header.html %}
   {{ content }}
   <script type="text/javascript" src='{{ "/assets/javascript/jquery.min.js" | prepend: site.baseurl }}'></script>
   <script type="text/javascript" src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>

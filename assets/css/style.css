@@ -1,7 +1,26 @@
 body {
   background: #000;
   overflow:hidden;
+  font-family: "Raleway";
 }
 ::-webkit-scrollbar { 
   display: none; 
+}
+nav.navbar {
+  background: rgba(0,0,0,0.7);
+  height: 70px;
+}
+.navbar-default {
+  border-color: #444;
+}
+.navbar-brand {
+  font-size: 25px;
+  padding: 25px 25px;
+  color: #fff !important;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 14px;
 }
