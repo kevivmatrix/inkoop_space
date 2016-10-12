@@ -7,9 +7,11 @@ function init() {
     width: width,
     height: height
   });
-  while (index < 800) {
+  var star_constant = 1350;
+  var stars_count = width * height / star_constant;
+  while (index < stars_count) {
     var circle = new createjs.Shape();
-    if (index % 3 == 0) {
+    if (index % 4 == 0) {
       var size = 1;
     } else {
       var size = 0.5;
