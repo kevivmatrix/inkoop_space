@@ -1,12 +1,14 @@
 function init() {
   var stage = new createjs.Stage("demoCanvas");
   var index = 0;
-  while (index < 500) {
+  var width = $(window).width();
+  // alert(width);
+  while (index < 600) {
     var circle = new createjs.Shape();
-    if (index % 2 == 0) {
-      var size = 0.5;
-    } else {
+    if (index % 3 == 0) {
       var size = 1;
+    } else {
+      var size = 0.5;
     }
     circle.graphics.beginFill("#ffffff").drawCircle(0, 0, size);
     circle.x = Math.floor((Math.random() * 1600) + 1);
