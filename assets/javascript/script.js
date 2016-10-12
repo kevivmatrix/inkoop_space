@@ -1,13 +1,13 @@
 function init() {
   var stage = new createjs.Stage("demoCanvas");
   var index = 0;
-  var width = $(window).width();
-  var height = $(window).height();
+  var width = $(window).width() * 3;
+  var height = $(window).height() * 3;
   $("#demoCanvas").attr({
     width: width,
     height: height
   });
-  var star_constant = 1350;
+  var star_constant = 450;
   var stars_count = width * height / star_constant;
   while (index < stars_count) {
     var circle = new createjs.Shape();
@@ -23,4 +23,14 @@ function init() {
     index++;
   }
   stage.update();
+
+  var x, y;
+
+  $("#demoCanvas").on("mousemove", function(e){
+    if (x && y) {
+      window.scrollBy(e.clientX - x, e.clientY - y);
+    }
+    x = e.clientX;
+    y = e.clientY;
+  });
 }
