@@ -2,6 +2,7 @@ body {
   background: #000;
   overflow:hidden;
   font-family: "Raleway";
+  color: #fff;
 }
 ::-webkit-scrollbar { 
   display: none; 
@@ -26,4 +27,29 @@ nav.navbar {
 }
 .navbar-default .navbar-nav>li>a:hover {
   color: #aaa;
+}
+#explore {
+  background: rgba(255,0,0,0.6);
+  width: 40%;
+  position: fixed;
+  left: 60%;
+  top: 200px;
+  border-radius: 4px;
+}
+#explore h2, #explore h3, #explore h4 {
+  text-align: center;
+  margin-top: 20px;
+}
+#explore .btn {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#explore .separator {
+  width: 100px;
+  background: #fff;
+  height: 1px;
+  margin: 20px auto;
 }
