@@ -1,7 +1,8 @@
 function init() {
   var stage = new createjs.Stage("space_canvas");
   var index = 0;
-  var width = $(window).width() * 3;
+  var screen_width = $(window).width();
+  var width = screen_width * 3;
   var height = $(window).height() * 3;
   $("#space_canvas").attr({
     width: width,
@@ -24,13 +25,17 @@ function init() {
   }
   stage.update();
 
-  var x, y;
+  var canvas_x, canvas_y;
 
   $("#space_canvas").on("mousemove", function(e){
-    if (x && y) {
-      window.scrollBy(e.clientX - x, e.clientY - y);
+    if (canvas_x && canvas_y) {
+      window.scrollBy(e.clientX - canvas_x, e.clientY - canvas_y);
     }
-    x = e.clientX;
-    y = e.clientY;
+    canvas_x = e.clientX;
+    canvas_y = e.clientY;
+  });
+  
+  $("#explore").css({
+    marginLeft: -(screen_width*3/10)
   });
 }
