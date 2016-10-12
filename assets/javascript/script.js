@@ -1,9 +1,9 @@
 function init() {
-  var stage = new createjs.Stage("demoCanvas");
+  var stage = new createjs.Stage("space_canvas");
   var index = 0;
   var width = $(window).width() * 3;
   var height = $(window).height() * 3;
-  $("#demoCanvas").attr({
+  $("#space_canvas").attr({
     width: width,
     height: height
   });
@@ -26,7 +26,7 @@ function init() {
 
   var x, y;
 
-  $("#demoCanvas").on("mousemove", function(e){
+  $("#space_canvas").on("mousemove", function(e){
     if (x && y) {
       window.scrollBy(e.clientX - x, e.clientY - y);
     }
