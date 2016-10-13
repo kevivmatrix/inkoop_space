@@ -2,8 +2,9 @@ function init() {
   var stage = new createjs.Stage("space_canvas");
   var index = 0;
   var screen_width = $(window).width();
+  var screen_height = $(window).height();
   var width = screen_width * 3;
-  var height = $(window).height() * 3;
+  var height = screen_height * 3;
   $("#space_canvas").attr({
     width: width,
     height: height
@@ -34,7 +35,7 @@ function init() {
     canvas_x = e.clientX;
     canvas_y = e.clientY;
   });
-  
+
   $("#explore").css({
     marginLeft: -(screen_width*3/10)
   });
@@ -49,11 +50,19 @@ function init() {
     var timer = setTimeout(function(){
       var new_rocket_x = Math.floor(Math.random() * width);
       var new_rocket_y = Math.floor(Math.random() * height);
+      if(new_rocket_x < 0)
+        new_rocket_x = 0;
+      if(new_rocket_y < 0)
+        new_rocket_y = 0;
+      if(new_rocket_x > width - 50)
+        new_rocket_x = width - 50;
+      if(new_rocket_y > height - 50)
+        new_rocket_y = height - 50;      
       var distance_x = new_rocket_x - rocket_x;
       var distance_y = new_rocket_y - rocket_y;
       var distance = Math.sqrt( Math.pow(distance_x, 2) + Math.pow(distance_y, 2) );
       time = Math.floor((distance / velocity) * 1000) ;
-      $("#rocket").animate({ left: new_rocket_x, top: new_rocket_y }, time, rocket_fly);
+      $("#rocket").animate({ left: new_rocket_x, top: new_rocket_y }, time, rocket_fly);      
     }, 1000);
   }
   rocket_fly();
