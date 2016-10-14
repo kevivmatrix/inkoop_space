@@ -46,7 +46,7 @@ function init() {
     $("#explore").fadeOut(400);
   });
   
-  var rocket_x = -100, rocket_y = -100, velocity = 500;
+  var rocket_x = -100, rocket_y = -100, velocity = 250;
   var time = 0;
   var theta_in_degree = 0;
   function rocket_fly() {
@@ -98,7 +98,7 @@ function init() {
             rocket_fly();
           });
         }
-      }, 1);
+      }, 10);
     }, 1000);
   }
   rocket_fly();
