@@ -30,7 +30,7 @@ function init() {
 
   var canvas_x, canvas_y;
 
-  $("#space_canvas").on("mousemove", function(e){
+  $("body").on("mousemove", function(e){
     if (canvas_x && canvas_y) {
       window.scrollBy(e.clientX - canvas_x, e.clientY - canvas_y);
     }
